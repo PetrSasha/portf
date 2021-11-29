@@ -82,13 +82,13 @@ const Page = () => {
                 <Paragraph> I want visit places : 
                     <List>
                         <ListItem>
-                            1) England
+                            1-England
                         </ListItem>
                         <ListItem>
-                            2) Japan
+                            2-Japan
                         </ListItem>
                         <ListItem>
-                            3) Village hidden in the foliage
+                            3-Village hidden in the foliage
                         </ListItem> 
                     </List>
                 </Paragraph>
