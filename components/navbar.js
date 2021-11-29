@@ -88,10 +88,9 @@ const Navbar = props => {
                                 <MenuItem as={Link}
                                 href='https://github.com/PetrSasha?tab=repositories'
                                 >
-
+                                    View Source
                                 </MenuItem>
                             </MenuList>
-
                         </Menu>
                     </Box>
                 </Box>
