@@ -1,4 +1,4 @@
-import {Container, Box , Heading, Image,Link, Button, ListItem, List } from '@chakra-ui/react'
+import {Container, Box , Heading, Image,Link, Button, ListItem, List,useColorModeValue } from '@chakra-ui/react'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
 import NextLink from 'next/link'
@@ -8,7 +8,8 @@ import { BioSection, BioYear } from '../components/bio'
 const Page = () => {
     return (
         <Container >
-            <Box borderRadius='lg' bg='red' p={3} mb={6} align='center'>
+            <Box borderRadius='lg' bg='red' p={3} mb={6} align='center' 
+            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}>
             Hello, I&apos;m a frontend-developer based on Ukraine
             </Box>
             <Box display={{md:'flex'}}>
