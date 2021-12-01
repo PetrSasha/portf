@@ -1,9 +1,16 @@
-import {Container, Box , Heading, Image,Link, Button, ListItem, List,useColorModeValue } from '@chakra-ui/react'
+import {Container, Box , Heading, Image,Link, Button, ListItem, List, Icon, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
 import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import {GridItem} from '../components/grid-item'
 import { BioSection, BioYear } from '../components/bio'
+import { IoLogoDiscord, IoLogoGithub, IoLogoInstagram } from 'react-icons/io5'
+import styled from '@emotion/styled'
+
+const Links = styled.a`
+text-decoration: none;
+`
 
 const Page = () => {
     return (
@@ -93,6 +100,44 @@ const Page = () => {
                         </ListItem> 
                     </List>
                 </Paragraph>
+            </Section>
+
+            <Section delay={0.3}>
+                <Heading as='h3' variant='section-title'>
+                    On The web
+                </Heading>
+                <List>
+                    <ListItem>
+                        <Link href='https://github.com/PetrSasha' target='_blank'  >
+                            <Button variant='ghost' colorScheme='teal' leftIcon={<Icon as={IoLogoGithub}/>}>
+                                @PetrSasha
+                            </Button>
+                        </Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link href='https://discord.com/'>
+                            <Button variant='ghost' colorScheme='blue' leftIcon={<Icon as={IoLogoDiscord}/>}>
+                                @PetrSasha
+                            </Button>
+                        </Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link href='https://instagram.com/'>
+                            <Button variant='ghost' colorScheme='pink' leftIcon={<Icon as={IoLogoInstagram}/>}>
+                                @PetrSasha
+                            </Button>
+                        </Link>
+                    </ListItem>
+                </List>
+
+        
+                <Box align='center' my={4}>
+                    <NextLink href='/posts'>
+                        <Button rightIcon={<ChevronRightIcon/>} colorScheme='teal'>
+                            Popular pots
+                        </Button>
+                    </NextLink>
+                </Box>
             </Section>
 
         </Container>
